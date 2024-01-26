@@ -6,7 +6,7 @@ import requests
 from datetime import datetime, timedelta, timezone
 
 token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiMzM2YWYwZTkxOWE0YThhYTExNGU4MjI1OGQzNWMwNCIsImlhdCI6MTcwNjI4NTg4MSwiZXhwIjoyMDIxNjQ1ODgxfQ.Ym9omu7LhvxSfwmSHXgGw-fZAMzKYcIy6mp4RXdnG6w"
-base_url = "172.30.232.3"
+base_url = "homeassistant.local"
 url = "http://" + base_url + ":8123/api/services/input_number/set_value"
 time_shift = timedelta(hours=1)
 headers = {
