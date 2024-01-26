@@ -6,7 +6,7 @@ import requests
 from datetime import datetime, timedelta, timezone
 
 token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhMDAwZmE2ZDJhZTQ0ZGNjYmRiYWU2ZGEzNTIyMjU5YSIsImlhdCI6MTcwNjI3MzEwOSwiZXhwIjoyMDIxNjMzMTA5fQ.AmCtbsBmqnYysnOTCc01_Ns_r6RSlV8c60GnPdaO8c8"
-base_url = "193.196.37.153"
+base_url = "172.30.232.3"
 url = "http://" + base_url + ":8123/api/services/input_number/set_value"
 time_shift = timedelta(hours=1)
 headers = {
