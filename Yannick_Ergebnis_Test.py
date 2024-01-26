@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import requests
 from datetime import datetime, timedelta, timezone
 
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhMDAwZmE2ZDJhZTQ0ZGNjYmRiYWU2ZGEzNTIyMjU5YSIsImlhdCI6MTcwNjI3MzEwOSwiZXhwIjoyMDIxNjMzMTA5fQ.AmCtbsBmqnYysnOTCc01_Ns_r6RSlV8c60GnPdaO8c8"
+token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJiMzM2YWYwZTkxOWE0YThhYTExNGU4MjI1OGQzNWMwNCIsImlhdCI6MTcwNjI4NTg4MSwiZXhwIjoyMDIxNjQ1ODgxfQ.Ym9omu7LhvxSfwmSHXgGw-fZAMzKYcIy6mp4RXdnG6w"
 base_url = "172.30.232.3"
 url = "http://" + base_url + ":8123/api/services/input_number/set_value"
 time_shift = timedelta(hours=1)
@@ -192,5 +192,5 @@ def execute(plant_id, helper_id_next, helper_id_last, moisture_threshold):
         print(f"Keine Daten für {plant_id}. Abbruch der weiteren Verarbeitung.")
 
 
-execute("input_number.feuchtigkeitssensor", "input_number.giesstermin", "input_number.helper_last_watering",
+execute("sensor.espwg2_moisture", "input_number.helper_prediction_next_watering", "input_number.helper_last_watering",
         30)
